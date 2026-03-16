@@ -4,7 +4,7 @@
 
 | Command | Cost | Description |
 |---|---|---|
-| `!join` | free | Required before using any economy commands. Grants 100 C0IN starter bonus. |
+| `!join` | free | Required before using any economy commands. Grants 100 C0IN starter bonus. Links to [NexusHelp](https://github.com/Nize2BeMe/NexusHelp). |
 | `!join @referrer` | free | Join and credit a referrer — you get 100 C0INs, they get 200 C0INs. Bonuses scale with the economy. |
 
 ---
@@ -13,7 +13,7 @@
 
 | Command | Cost | Description |
 |---|---|---|
-| `!mine <CODE>` | free | Claim mining reward. Requires rotating code shown on overlay. Base 50 C0INs + 15 per level. 5-min cooldown. |
+| `!mine <CODE>` | free | Claim mining reward. Requires the 5-digit code shown on overlay. Both the current and previous code are accepted. Base 50 C0INs + 15 per level. **30-second cooldown.** |
 | `!invest` | 200+ | Upgrade mining level (max 10). Cost increases 150 C0INs per level. |
 | `!specialize deep/speed/lucky` | 2,000 | Choose a mining specialization at level 5+. One-time choice. |
 | `!stake <amount>` | free | Move liquid C0INs to your hack-proof vault. |
@@ -22,18 +22,20 @@
 | `!checkin` | free | 4h cooldown. 50–150 C0INs. |
 | `!weekly` | free | 72h cooldown. 600–1,500 C0INs + Crypt0 bonus at 2/4/8-week streaks. |
 | `!wallet` | free | Your balance, vault, Crypt0 holdings, level, shields, streaks. |
-| `!stats [@user]` | free | Full career stats. Omit `@user` for your own stats. |
+| `!stats [@user]` | free | Full career stats including current C0IN balance. Omit `@user` for your own stats. |
 | `!top` | free | Top 5 leaderboard (rich / hackers / miners). |
 | `!rig buy/upgrade` | varies | Purchase or upgrade a Mining RIG for automated passive mining income. Max level 10. |
-| `!help` | free | Full command list — whispered privately (public @-reply fallback on Twitch). |
+| `!help` | free | Posts the NexusHelp GitHub link in chat. |
+
+**Mine Code Rotation:** The 5-digit mine code rotates every **30 seconds**. The overlay shows the current code floating around the screen (anti-bot measure). Both the current and the previous code are always accepted, giving viewers a full 60-second window.
 
 **Mining Specializations** (requires Mining Level 5 + 2,000 C0INs):
 
 | Style | Yield | Cooldown |
 |---|---|---|
-| `deep` | 2× base | 8 min |
-| `speed` | 0.7× base | 3 min |
-| `lucky` | 1× base | 5 min (10% chance for 5× jackpot) |
+| `deep` | 2× base | 48s |
+| `speed` | 0.7× base | 18s |
+| `lucky` | 1× base | 30s (10% chance for 5× jackpot) |
 
 ---
 
@@ -94,24 +96,26 @@
 
 | Command | Description |
 |---|---|
-| `!shop` | View available titles and their prices/requirements. |
-| `!equip <title>` | Equip a purchased title. Shown on the leaderboard. |
+| `!shop` | View available titles and their prices. |
+| `!equip <title>` | Purchase and equip a title instantly. Yours forever — no earning required. |
 
-**Available Titles** (price = lifetime earned required — you must have earned at least this much to unlock):
+Titles are **bought once and equipped permanently**. No earning phase — pay the price and the title is active on the leaderboard immediately.
 
-| Title | Price / Lifetime Earned Required |
+**Available Titles:**
+
+| Title | Price |
 |---|---|
-| 😎 Chad | 500 |
-| 💻 Hacker | 1,500 |
-| 👻 Ghost | 1,500 |
-| ⭐ VIP | 5,000 |
-| 💰 Baron | 10,000 |
-| ₿ Crypto | 25,000 |
-| 🔥 Legend | 50,000 |
-| 💎 Diamond | 100,000 |
-| ⚡ Glitch | 75,000 | **Animated** — glitch effect |
-| 🔮 Plasma | 125,000 | **Animated** — rainbow gradient |
-| 🌋 Inferno | 200,000 | **Animated** — fire glow |
+| 😎 Chad | 500 C0INs |
+| 💻 Hacker | 1,500 C0INs |
+| 👻 Ghost | 1,500 C0INs |
+| ⭐ VIP | 5,000 C0INs |
+| 💰 Baron | 10,000 C0INs |
+| ₿ Crypto | 25,000 C0INs |
+| 🔥 Legend | 50,000 C0INs |
+| 💎 Diamond | 100,000 C0INs |
+| ⚡ Glitch | 75,000 C0INs | **Animated** — glitch effect |
+| 🔮 Plasma | 125,000 C0INs | **Animated** — rainbow gradient |
+| 🌋 Inferno | 200,000 C0INs | **Animated** — fire glow |
 
 ---
 
@@ -216,7 +220,7 @@ Quest progress is tracked server-side. Rewards are auto-claimed when you type `!
 - The Hall of Fame panel is visible on the overlay.
 - Prestige badges persist across seasons and are visible on the leaderboard.
 
-Seasons auto-end after 14 days (`seasonDurationMs`) and a new season starts automatically. Mods can also manually end seasons with `!admin season end`.
+Seasons are managed by moderators with `!admin season start` and `!admin season end`.
 
 ---
 
